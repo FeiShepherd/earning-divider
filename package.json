@@ -1,0 +1,19 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "description": "game",
+  "main": "test.js",
+  "scripts": {
+    "test": "jest test.js",
+    "start": "npm test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ganache-core": "^2.3.3",
+    "jest": "^23.6.0",
+    "solc": "^0.5.2",
+    "web3": "^1.0.0-beta.48"
+  }
+}
