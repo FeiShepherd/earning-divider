@@ -10,7 +10,7 @@ describe('test stuff', () => {
   beforeAll(async () => {
     try {
       // 1. Compile contract artifact
-      const { SimpleStorage } = await compile('SimpleStorage.sol')
+      const { SimpleStorage } = await compile('earningDivider.sol')
 
       // 2. Spawn Ganache test blockchain
       provider = Ganache.provider()
@@ -45,16 +45,5 @@ describe('test stuff', () => {
 
   it('should test contract', async () => {
     // get old value
-    const oldVal = await contractInstance.methods.get().call()
-
-    // set new value
-    await contractInstance.methods.set(5).send({ from: accounts[0] })
-
-    // get new value
-    const newVal = await contractInstance.methods.get().call()
-
-    // assert our expectations
-    expect(oldVal).toBe('0')
-    expect(newVal).toBe('5')
   })
 })
