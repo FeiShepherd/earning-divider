@@ -19,7 +19,7 @@ contract EarningsDivider{
 
   function giveShares(address receiver, uint8 shares) external {
     require(holders[msg.sender].shares > 0);
-    
+
     uint8 memory currentShares = holders[msg.sender].shares;
     require(shares < currentShares && shares > 0);
 
